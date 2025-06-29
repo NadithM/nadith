@@ -1,0 +1,92 @@
+:root {
+  --bg: #ffffff;
+  --text: #222;
+  --accent: #4CAF50;
+  --link: #4CAF50;
+}
+
+body.dark {
+  --bg: #121212;
+  --text: #eeeeee;
+  --accent: #90ee90;
+  --link: #90ee90;
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--text);
+  font-family: 'Segoe UI', Tahoma, sans-serif;
+  margin: 0;
+  padding: 0;
+  transition: background-color 0.5s, color 0.5s;
+}
+
+header {
+  background-color: var(--accent);
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 1.5rem;
+  color: white;
+}
+
+nav a {
+  margin-left: 1rem;
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  color: #ddd;
+}
+
+button#toggle-theme {
+  background: none;
+  border: 2px solid white;
+  color: white;
+  padding: 0.3rem 0.7rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s, color 0.3s;
+}
+
+button#toggle-theme:hover {
+  background: white;
+  color: var(--accent);
+}
+
+main {
+  padding: 2rem;
+  max-width: 800px;
+  margin: auto;
+}
+
+section {
+  margin-bottom: 2rem;
+}
+
+h2 {
+  border-bottom: 2px solid var(--accent);
+  padding-bottom: 0.2rem;
+  margin-top: 2rem;
+}
+
+ul {
+  padding-left: 1.2rem;
+}
+
+a {
+  color: var(--link);
+  transition: color 0.3s;
+}
+
+a:hover {
+  color: var(--accent);
+}
