@@ -101,20 +101,15 @@
     </section>
     <!-- /Hero Section -->
     <script>
-        // SET YOUR START DATE HERE (adjust as needed)
-        const startDate = new Date('2017-06-01');
+        // EXPERIENCE CALCULATION
+        // Experience start date: July 2017
+        const experienceStartDate = new Date('2017-07-01');
+        let experienceYears = now.getFullYear() - experienceStartDate.getFullYear();
 
-        // Get today's date
-        const now = new Date();
-
-        let years = now.getFullYear() - startDate.getFullYear();
-
-        // Check if we've reached July in the current year
-        const november = 6; // Month index 10 = July
-        if (now.getMonth() < november) {
-            years--; // Haven't reached November yet
+        // Increment only after July (Month index 6)
+        if (now.getMonth() < 6) {
+            experienceYears--;
         }
-
         // Always display as "X+ years"
         document.getElementById('years').textContent = years + '+ years';
 
