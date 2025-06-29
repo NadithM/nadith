@@ -101,13 +101,22 @@
     </section>
     <!-- /Hero Section -->
     <script>
+        // -----------------------
         // EXPERIENCE CALCULATION
-        // Experience start date: July 2017
-        const experienceStartDate = new Date('2017-07-01');
-        let experienceYears = now.getFullYear() - experienceStartDate.getFullYear();
+        // -----------------------
+        // Your professional experience starts in July 2017
+        const experienceStartYear = 2017;
 
-        // Increment only after July (Month index 6)
-        if (now.getMonth() < 6) {
+        // Month when your experience increments every year: July
+        // Month index is 0-based in JavaScript (0 = January, 6 = July)
+        const experienceIncrementMonth = 6;
+
+        // Compute the difference in years between now and start year
+        let experienceYears = now.getFullYear() - experienceStartYear;
+
+        // Check if we are *before* July this year
+        // If yes, don't count this year's increment yet
+        if (now.getMonth() < experienceIncrementMonth) {
             experienceYears--;
         }
         // Always display as "X+ years"
