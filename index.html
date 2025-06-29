@@ -163,35 +163,6 @@
 
     </section><!-- /About Section -->
 
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const now = new Date();
-
-            // -----------------------
-            // EXPERIENCE CALCULATION
-            // -----------------------
-            // Experience start date: July 2017
-            const experienceStartYear = 2017;
-            const experienceIncrementMonth = 6; // July (0-based index)
-
-            let experienceYears = now.getFullYear() - experienceStartYear;
-            if (now.getMonth() > experienceIncrementMonth) {
-                experienceYears++;
-            }
-            document.getElementById('years').textContent = experienceYears + '+ years';
-
-            // -----------------------
-            // AGE CALCULATION
-            // -----------------------
-            // You are 32 in September 2025
-            const referenceAge = 33;
-            const referenceYear = 2025;
-
-            let age = referenceAge + (now.getFullYear() - referenceYear);
-            document.getElementById('ageValue').textContent = age + '';
-        });
-    </script>
-
     <!-- Stats Section -->
     <section class="stats section" id="stats">
 
@@ -309,7 +280,7 @@
         <!-- Section Title -->
         <div class="container section-title" data-aos="fade-up">
             <h2>Resume</h2>
-            <p>Lead Software Engineer with over 7 years of experience delivering enterprise-grade solutions for global
+            <p>Lead Software Engineer with over <span id="years"></span> of experience delivering enterprise-grade solutions for global
                 clients.</p>
 
             <h3 class="resume-title">Summary</h3>
@@ -882,6 +853,34 @@
 
     </section><!-- /Contact Section -->
 
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const now = new Date();
+
+            // -----------------------
+            // EXPERIENCE CALCULATION
+            // -----------------------
+            // Experience start date: July 2017
+            const experienceStartYear = 2017;
+            const experienceIncrementMonth = 6; // July (0-based index)
+
+            let experienceYears = now.getFullYear() - experienceStartYear;
+            if (now.getMonth() > experienceIncrementMonth) {
+                experienceYears++;
+            }
+            document.getElementById('years').textContent = experienceYears + '+ years';
+
+            // -----------------------
+            // AGE CALCULATION
+            // -----------------------
+            // You are 32 in September 2025
+            const referenceAge = 33;
+            const referenceYear = 2025;
+
+            let age = referenceAge + (now.getFullYear() - referenceYear);
+            document.getElementById('ageValue').textContent = age + '';
+        });
+    </script>
 </main>
 
 <footer class="footer position-relative light-background" id="footer">
