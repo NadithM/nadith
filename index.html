@@ -174,8 +174,8 @@
             const experienceIncrementMonth = 6; // July (0-based index)
 
             let experienceYears = now.getFullYear() - experienceStartYear;
-            if (now.getMonth() < experienceIncrementMonth) {
-                experienceYears--;
+            if (now.getMonth() > experienceIncrementMonth) {
+                experienceYears++;
             }
             document.getElementById('years').textContent = experienceYears + '+ years';
 
