@@ -117,6 +117,21 @@
 
         // Always display as "X+ years"
         document.getElementById('years').textContent = years + '+ years';
+
+        // AGE CALCULATION
+        // For September 2025 you are 32 years old
+        const referenceMonth = 8; // Month index 8 = September
+        const referenceYear = 2025;
+        const referenceAge = 32;
+
+        let age = referenceAge + (now.getFullYear() - referenceYear);
+
+        if (now.getMonth() < referenceMonth) {
+            age--;
+        }
+
+        document.getElementById('ageValue').textContent = age + ' years';
+
     </script>
     <!-- About Section -->
     <section id="about" class="about section">
@@ -157,7 +172,7 @@
                         </div>
                         <div class="col-lg-6">
                             <ul>
-                                <li><i class="bi bi-chevron-right"></i> <strong>Age:</strong> <span>32</span></li>
+                                <li><i class="bi bi-chevron-right"></i> <strong>Age:</strong> <span id="ageValue"></span></li>
                                 <li><i class="bi bi-chevron-right"></i> <strong>Degree:</strong> <span>Bachelor</span>
                                 </li>
                                 <li><i class="bi bi-chevron-right"></i> <strong>Email:</strong> <span>nadith@google.com / nadith.sg@gmail.com</span>
