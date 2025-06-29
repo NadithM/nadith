@@ -100,31 +100,47 @@
         </div>
     </section>
     <!-- /Hero Section -->
+
     <script>
-        // SET YOUR START DATE HERE (adjust as needed)
-        const startDate = new Date('2017-11-01');
+        document.addEventListener('DOMContentLoaded', () => {
+            const now = new Date();
 
-        // Get today's date
-        const now = new Date();
+            // -----------------------
+            // EXPERIENCE CALCULATION
+            // -----------------------
+            // Experience start date: July 2017
+            const experienceStartYear = 2017;
+            const experienceIncrementMonth = 6; // July (0-based index)
 
-        let years = now.getFullYear() - startDate.getFullYear();
+            let experienceYears = now.getFullYear() - experienceStartYear;
+            if (now.getMonth() < experienceIncrementMonth) {
+                experienceYears--;
+            }
+            document.getElementById('years').textContent = experienceYears + '+ years';
 
-        // Check if we've reached November in the current year
-        const november = 10; // Month index 10 = November
-        if (now.getMonth() < november) {
-            years--; // Haven't reached November yet
-        }
+            // -----------------------
+            // AGE CALCULATION
+            // -----------------------
+            // You are 32 in September 2025
+            const referenceAge = 32;
+            const referenceMonth = 8; // September (0-based index)
+            const referenceYear = 2025;
 
-        // Always display as "X+ years"
-        document.getElementById('years').textContent = years + '+ years';
+            let age = referenceAge + (now.getFullYear() - referenceYear);
+            if (now.getMonth() < referenceMonth) {
+                age--;
+            }
+            document.getElementById('ageValue').textContent = age + '';
+        });
     </script>
+
     <!-- About Section -->
     <section id="about" class="about section">
 
         <!-- Section Title -->
         <div class="container section-title" data-aos="fade-up">
             <h2>About</h2>
-            <p>Lead Software Engineer with <span id="years"></span> of experience in Java/Kotlin, Spring
+            <p>Lead Software Engineer with <span id="years"></span> years of experience in Java/Kotlin, Spring
                 ecosystem, microservices, and real-time payment systems for clients like Google, Visa, NETS, Disney, and
                 London Stock Exchange.</p>
         </div><!-- End Section Title -->
