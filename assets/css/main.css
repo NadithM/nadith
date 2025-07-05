@@ -721,7 +721,7 @@ section,
 /*--------------------------------------------------------------
 # Resume Section
 --------------------------------------------------------------*/
-.resume-header {
+.resume .resume-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -730,7 +730,7 @@ section,
   flex-wrap: wrap;
 }
 
-.resume-position {
+.resume .resume-position {
   font-weight: 700;
   color: #007bff;
   font-size: 1.1rem;
@@ -738,7 +738,7 @@ section,
   align-items: center;
 }
 
-.resume-duration {
+.resume .resume-duration {
   font-style: italic;
   color: #6c757d;
   font-size: 1rem;
@@ -746,7 +746,7 @@ section,
   align-items: center;
 }
 
-.resume-company {
+.resume .resume-company {
   font-weight: 600;
   margin-top: 6px;
   margin-bottom: 12px;
