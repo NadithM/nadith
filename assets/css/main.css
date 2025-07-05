@@ -718,6 +718,21 @@ section,
   background-color: var(--accent-color);
 }
 
+
+.tech-icon {
+  display: inline-flex;
+  align-items: center;
+  margin-right: 10px;
+}
+
+.tech-icon img {
+  width: 18px;
+  height: 18px;
+  margin-right: 4px;
+  vertical-align: middle;
+}
+
+
 /*--------------------------------------------------------------
 # Resume Section
 --------------------------------------------------------------*/
