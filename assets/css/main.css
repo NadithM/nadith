@@ -1360,3 +1360,37 @@ section,
   background-color: var(--accent-color);
   color: #fff;
 }
+
+
+.tech-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  margin-top: 20px;
+}
+
+.tech-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100px; /* You can adjust size here */
+}
+
+.tech-image {
+  width: 64px;   /* Bigger icon */
+  height: 64px;
+  object-fit: contain;
+  margin-bottom: 8px;
+  transition: transform 0.3s ease;
+}
+
+.tech-image:hover {
+  transform: scale(1.1);
+}
+
+.tech-name {
+  font-size: 14px;
+  text-align: center;
+  color: var(--default-color);
+  font-weight: 600;
+}
