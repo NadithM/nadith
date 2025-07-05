@@ -721,6 +721,41 @@ section,
 /*--------------------------------------------------------------
 # Resume Section
 --------------------------------------------------------------*/
+.resume-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 8px;
+  margin-bottom: 4px;
+  flex-wrap: wrap;
+}
+
+.resume-position {
+  font-weight: 700;
+  color: #007bff;
+  font-size: 1.1rem;
+  display: flex;
+  align-items: center;
+}
+
+.resume-duration {
+  font-style: italic;
+  color: #6c757d;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+}
+
+.resume-company {
+  font-weight: 600;
+  margin-top: 6px;
+  margin-bottom: 12px;
+  color: #343a40;
+  display: flex;
+  align-items: center;
+  font-size: 1rem;
+}
+
 .resume .resume-title {
   font-size: 1.8rem;
   font-weight: 600;
