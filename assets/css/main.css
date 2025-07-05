@@ -1342,3 +1342,21 @@ section,
     content: url('assets/img/hero-bg-mobile.jpg');
   }
 }
+
+.portfolio .portfolio-content .portfolio-info .custom-link-row .details-link {
+  position: static !important;
+  font-size: 26px;
+  line-height: 1.2;
+  color: var(--contrast-color);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6px;
+  border-radius: 50%;
+  transition: 0.3s;
+}
+
+.portfolio .portfolio-content .portfolio-info .custom-link-row .details-link:hover {
+  background-color: var(--accent-color);
+  color: #fff;
+}
