@@ -1371,7 +1371,6 @@ section,
 }
 
 .tech-item {
-  aspect-ratio: 1 / 1;
   flex: 1 1 calc(16% - 16px);
   max-width: calc(16% - 16px);
   display: flex;
@@ -1383,13 +1382,11 @@ section,
 
 .tech-image {
   width: 100%;
-  max-width: 100%;
   height: auto;
   object-fit: contain;
   margin-bottom: 6px;
   transition: transform 0.3s ease;
 }
-
 
 .tech-image:hover {
   transform: scale(1.1);
