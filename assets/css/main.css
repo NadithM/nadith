@@ -1273,3 +1273,16 @@ section,
 .starter-section {
   /* Add your styles here */
 }
+
+.hero-bg {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+/* Swap background image for mobile */
+@media (max-width: 768px) {
+  .hero-bg {
+    content: url('assets/img/hero-bg-mobile.jpg');
+  }
+}
