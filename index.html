@@ -71,11 +71,6 @@
 
 <main class="main">
 
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>
-        AOS.init();
-    </script>
 
     <!-- Hero Section -->
     <section class="hero section dark-background" id="hero">
@@ -442,7 +437,7 @@
             <div class="resume-item pb-0" data-aos="fade-up" data-aos-delay="200">
                 <h4>Nadith Premaratne</h4>
                 <p><em>
-                    Lead Software Engineer with 8+ years of experience delivering enterprise-grade solutions for
+                    Lead Software Engineer with  <span id="years-2"></span> of experience delivering enterprise-grade solutions for
                     world-class clients including Disney, London Stock Exchange, NETS, Visa, and Google. Recognized with
                     the Dream Team and Vanguard Awards for engineering excellence and leadership on the Google Fiber
                     Project.
@@ -1046,7 +1041,11 @@
 
     </section><!-- /Contact Section -->
 
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
+        AOS.init();
         document.addEventListener('DOMContentLoaded', () => {
             const now = new Date();
 
