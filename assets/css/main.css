@@ -552,15 +552,15 @@ section,
   justify-content: center;
 }
 
-.hero img {
+.hero-bg {
   position: absolute;
   inset: 0;
-  display: block;
   width: 100%;
   height: 100%;
   object-fit: cover;
   z-index: 1;
 }
+
 
 .hero:before {
   content: "";
@@ -1409,72 +1409,120 @@ section,
   line-height: 1.2;
 }
 
-/* HERO FULLSCREEN SWIPER STYLES */
-
+/* HERO SECTION */
 .hero {
+  width: 100%;
+  min-height: 100vh;
   position: relative;
-  overflow: hidden;
-  height: 100vh;
+  padding: 80px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
+
+/* Mobile override: smaller height */
+@media (max-width: 768px) {
+  .hero {
+    height: 300px;
+    margin: 20px auto;
+  }
+}
+
+/* Swiper container should fill .hero */
 .hero-swiper {
   width: 100%;
   height: 100%;
   position: relative;
 }
 
-.hero-swiper .swiper-wrapper {
+/* Slides fill .hero but keep image centered and contained */
+.hero-swiper .swiper-wrapper,
+.hero-swiper .swiper-slide {
+  width: 100%;
   height: 100%;
 }
 
 .hero-swiper .swiper-slide {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  padding: 0; /* remove the padding that breaks full height */
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background-color: #000;
 }
 
 .hero-swiper .swiper-slide img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  display: block;
+  margin: auto;
 }
 
-/* HERO Overlay Content */
-.hero .hero-overlay-content {
+/* Optional overlay text on top of slider */
+.hero-overlay-content {
   position: absolute;
   top: 0;
   left: 0;
+  z-index: 10;
   width: 100%;
   height: 100%;
-  padding: 2rem;
-  color: #fff;
-  background: rgba(0, 0, 0, 0.4); /* Optional overlay tint for readability */
-  z-index: 2;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
+  padding: 2rem;
+  background: rgba(0, 0, 0, 0.4);
+  color: #fff;
 }
 
-.hero .hero-overlay-content h2 {
-  font-size: 3rem;
-  font-weight: 700;
+.hero-overlay-content h2 {
+  font-size: 2rem;
   margin: 0.5rem 0;
 }
 
-.hero .hero-overlay-content p {
-  font-size: 1.5rem;
-  font-weight: 400;
-  margin: 0.5rem 0;
+.hero-overlay-content p {
+  font-size: 1.2rem;
+  max-width: 800px;
+  margin: 0.5rem auto;
 }
 
-.hero .swiper-pagination,
+.hero-overlay-content .typed {
+  font-weight: 600;
+  color: #ffd700;
+}
+
+/* Swiper pagination and navigation buttons */
+.hero .swiper-pagination {
+  position: absolute;
+  bottom: 10px;
+  width: 100%;
+  text-align: center;
+  z-index: 11;
+}
+
+.hero .swiper-pagination-bullet {
+  background: #fff;
+  opacity: 0.7;
+}
+
+.hero .swiper-pagination-bullet-active {
+  background: #ffd700;
+  opacity: 1;
+}
+
 .hero .swiper-button-prev,
 .hero .swiper-button-next {
-  z-index: 3;
+  color: #fff;
+  width: 36px;
+  height: 36px;
+  background: rgba(0, 0, 0, 0.4);
+  border-radius: 50%;
+  z-index: 11;
+}
+
+.hero .swiper-button-prev:hover,
+.hero .swiper-button-next:hover {
+  background: rgba(0, 0, 0, 0.6);
 }
