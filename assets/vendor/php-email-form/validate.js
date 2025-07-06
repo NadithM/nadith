@@ -67,6 +67,12 @@
                 if (data.ok) {
                     thisForm.querySelector('.sent-message').classList.add('d-block');
                     thisForm.reset();
+
+// Auto-hide success message after 5 seconds
+                    setTimeout(() => {
+                        thisForm.querySelector('.sent-message').classList.remove('d-block');
+                    }, 5000);
+
                 } else {
                     throw new Error('Form submission failed');
                 }
