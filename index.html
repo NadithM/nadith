@@ -86,17 +86,6 @@
 <!--        </div>-->
 <!--    </section>-->
     <section class="hero section dark-background" id="hero">
-        <div class="container section-title" data-aos="fade-up">
-            <h2>Nadith Premaratne</h2>
-            <p>
-                I'm a
-                <span
-                        class="typed"
-                        data-typed-items="Backend Developer(Java/Kotlin), Lead Engineer, ML/AI Enthusiast, Microservices Architect">
-        Lead Software Engineer
-      </span>
-            </p>
-        </div>
 
         <div class="container" data-aos="fade-up" data-aos-delay="100">
             <div class="swiper hero-swiper">
@@ -112,6 +101,18 @@
                 <div class="swiper-pagination"></div>
                 <div class="swiper-button-prev"></div>
                 <div class="swiper-button-next"></div>
+            </div>
+
+            <div class="container section-title" data-aos="fade-up">
+                <h2>Nadith Premaratne</h2>
+                <p>
+                    I'm a
+                    <span
+                            class="typed"
+                            data-typed-items="Backend Developer(Java/Kotlin), Lead Engineer, ML/AI Enthusiast, Microservices Architect">
+        Lead Software Engineer
+      </span>
+                </p>
             </div>
         </div>
     </section>
@@ -1210,24 +1211,35 @@
 <script>
     const heroSwiper = new Swiper('.hero-swiper', {
         loop: true,
+        speed: 600,
         autoplay: {
             delay: 5000,
             disableOnInteraction: false
         },
+        slidesPerView: 'auto',
+        spaceBetween: 40,
         pagination: {
             el: '.swiper-pagination',
+            type: 'bullets',
             clickable: true
         },
         navigation: {
             nextEl: '.swiper-button-next',
             prevEl: '.swiper-button-prev'
         },
-        effect: 'fade',
-        fadeEffect: {
-            crossFade: true
+        breakpoints: {
+            320: {
+                slidesPerView: 1,
+                spaceBetween: 40
+            },
+            1200: {
+                slidesPerView: 3,
+                spaceBetween: 20
+            }
         }
     });
 </script>
+
 
 <!-- Main JS File -->
 <script src="assets/js/main.js"></script>
