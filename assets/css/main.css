@@ -1409,7 +1409,7 @@ section,
   line-height: 1.2;
 }
 
-/* HERO SECTION */
+ /*HERO SECTION */
 .hero {
   width: 100%;
   min-height: 100vh;
@@ -1419,7 +1419,6 @@ section,
   align-items: center;
   justify-content: center;
 }
-
 
 /* Mobile override: smaller height */
 @media (max-width: 768px) {
@@ -1440,10 +1439,11 @@ section,
 .hero-swiper .swiper-wrapper,
 .hero-swiper .swiper-slide {
   width: 100%;
-  height: 100%;
+  height: 625px;
 }
 
 .hero-swiper .swiper-slide {
+  aspect-ratio: 16 / 9;  /* or 4 / 3 or whatever you want */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1452,12 +1452,12 @@ section,
 }
 
 .hero-swiper .swiper-slide img {
-  max-width: 100%;
-  max-height: 100%;
+  width: 100%;
+  height: 100%;
   object-fit: contain;
-  display: block;
-  margin: auto;
+  background-color: #000;    /* Or any backdrop you want */
 }
+
 
 /* Optional overlay text on top of slider */
 .hero-overlay-content {
