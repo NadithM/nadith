@@ -73,15 +73,48 @@
 
 
     <!-- Hero Section -->
+<!--    <section class="hero section dark-background" id="hero">-->
+<!--        <picture>-->
+<!--            <source media="(max-width: 768px)" srcset="assets/img/hero-bg-mobile.jpg">-->
+<!--            <img alt="" class="hero-bg" data-aos="fade-in" src="assets/img/hero-bg.jpg">-->
+<!--        </picture>-->
+<!--        <div class="container" data-aos="fade-up" data-aos-delay="100">-->
+<!--            <h2>Nadith Premaratne</h2>-->
+<!--            <p>I'm a <span class="typed"-->
+<!--                           data-typed-items="Backend Developer(Java/Kotlin), Lead Engineer, ML/AI Enthusiast, Microservices Architect">Lead Software Engineer</span>-->
+<!--            </p>-->
+<!--        </div>-->
+<!--    </section>-->
     <section class="hero section dark-background" id="hero">
-        <picture>
-            <source media="(max-width: 768px)" srcset="assets/img/hero-bg-mobile.jpg">
-            <img alt="" class="hero-bg" data-aos="fade-in" src="assets/img/hero-bg.jpg">
-        </picture>
-        <div class="container" data-aos="fade-up" data-aos-delay="100">
+        <div class="swiper hero-swiper">
+            <div class="swiper-wrapper">
+
+                <div class="swiper-slide">
+                    <img src="assets/img/hero/hero-1.jpg" alt="Hero Image 1" class="hero-bg" />
+                </div>
+
+                <div class="swiper-slide">
+                    <img src="assets/img/hero/hero-2.jpg" alt="Hero Image 2" class="hero-bg" />
+                </div>
+
+                <!-- Add more slides if you want -->
+            </div>
+
+            <!-- Optional Swiper controls -->
+            <div class="swiper-pagination"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+        </div>
+
+        <div class="container hero-content" data-aos="fade-up" data-aos-delay="100">
             <h2>Nadith Premaratne</h2>
-            <p>I'm a <span class="typed"
-                           data-typed-items="Backend Developer(Java/Kotlin), Lead Engineer, ML/AI Enthusiast, Microservices Architect">Lead Software Engineer</span>
+            <p>
+                I'm a
+                <span
+                        class="typed"
+                        data-typed-items="Backend Developer(Java/Kotlin), Lead Engineer, ML/AI Enthusiast, Microservices Architect">
+        Lead Software Engineer
+      </span>
             </p>
         </div>
     </section>
@@ -689,7 +722,7 @@
 
             <div class="resume-item" data-aos="fade-up" data-aos-delay="200">
                 <div class="resume-header">
-                    <span👨‍💻 Engineering Intern Software class="resume-position"> </span>
+                    <span class="resume-position">‍👨‍💻 Engineering Intern Software</span>
                     <span class="resume-duration">🗓️ Nov 2016 - Apr 2017</span>
                 </div>
                 <div class="resume-company">
