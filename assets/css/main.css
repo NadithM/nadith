@@ -1455,3 +1455,32 @@ section,
   margin-top: 20px;
   text-align: center;
 }
+
+.hero {
+  position: relative;
+  overflow: hidden;
+}
+
+.hero .hero-swiper img {
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+}
+
+.hero .hero-overlay-content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 2rem;
+  color: #fff;
+  background: rgba(0, 0, 0, 0.4); /* Optional overlay tint */
+  z-index: 2;
+}
+
+.hero .hero-overlay-content h2,
+.hero .hero-overlay-content p {
+  margin: 0;
+  padding: 0.5rem;
+}
